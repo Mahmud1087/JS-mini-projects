@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: #ccc;
+}
+
+.texts {
+  margin: 0.3rem 0 1.2rem 0;
+}
+
+.texts h1 {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.texts p {
+  padding: 0 0.7rem;
+}
+
+.buttons_texts {
+  padding: 0 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.input_button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input_button input {
+  width: 80%;
+  height: 2rem;
+  padding: 0 0.4rem;
+  border: 1px solid #333;
+  border-radius: 7px;
+  font-size: 1rem;
+}
+
+.input_button input:focus {
+  outline: 1px solid black;
+}
+
+.input_button button, #startAgain, #newGame {
+  font-size: 1rem;
+  border: none;
+  background-color: #333;
+  padding: 0 0.7rem;
+  color: white;
+  border-radius: 7px;
+}
+
+.input_button #check2 {
+  display: none;
+}
+
+.prevNums_tryLeft {
+  margin-top: 0.7rem;
+  line-height: 1.8;
+}
+
+.wrong_correct_over {
+  line-height: 1.8;
+  padding: 0 0.7rem;
+}
+
+#startAgain, #newGame {
+  padding: 0.5rem 0.7rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+#wrongNum, #gameOver {
+  color: red;
+  
+}
+
+#correct {
+  color: green;
+}
+
+#newGame {
+  background-color: green;
+  display: none;
+}
+
+/* MEDIA QUERY FOR SCREEN FROM 760px AND ABOVE*/
+@media screen and (min-width: 760px) {
+  body {
+    font-size: 2rem;
+  }
+  .texts h1 {
+    font-size: 2.5rem;
+  }
+  
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+  
+  .buttons_texts {
+    max-width: 480px;
+  }
+  
+  .input_button input {
+    width: 100%;
+    height: 40px;
+    margin-right: 10px;
+    font-size: 1.6rem;
+  }
+  
+  .input_button button {
+    font-size: 1.6rem;
+  }
+}

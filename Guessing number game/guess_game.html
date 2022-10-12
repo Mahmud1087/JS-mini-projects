@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Guessing Number Game</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  </head>
+  <body>
+    <!-- Container -->
+    <div class="container">
+      <!-- Header and paragraph secion -->
+      <div class="texts">
+        <h1>Guessing Number Game</h1>
+        <p>A random number (1-100) has been selected for this game. 
+        Try to guess the correct number in 10 tries
+        </p>
+      </div>
+      
+      <!-- Input, check button, prev number entered and tries left counter -->
+      <div class="buttons_texts">
+        <!-- Input Field and Check Button Section -->
+        <div class="input_button">
+          <input type="number" name="guess" id="guess" value="player guess" placeholder="Guess the number" />
+          <button type="submit" id="check">Check</button>
+          <button type="submit" id="check2">Check</button>
+        </div>
+        
+        <!-- Previous Numbers entered and Tries left counter section -->
+        <div class="prevNums_tryLeft">
+          <p id="prevNum">Previous numbers entered: </p>
+          <p id="tryLeft">Tries left: <span id="counter"></span></p>
+        </div>
+      </div>
+      
+      <!-- Wrong, Correct, Game Over and New Game button Section -->
+      <div class="wrong_correct_over">
+        <p id="wrongNum"></p>
+        <p id="correct"></p>
+        <p id="gameOver"></p>
+        <button id="newGame" type="submit">New Game</button>
+      </div>
+    </div>
+    
+    
+    
+    <script src="script.js" type="text/javascript" charset="utf-8"></script>
+    <noscript>
+      Please enable javascript in your browser setting
+    </noscript>
+  </body>
+</html>
