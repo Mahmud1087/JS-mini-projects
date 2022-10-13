@@ -45,6 +45,7 @@ checkBtn.addEventListener('click', () => {
     checkBtn.style.display = 'none';
     checkBtn2.style.display = 'block'
   }
+  input.value = "";
 })
 
 // Button to reload the page in order to start a new game
