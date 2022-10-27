@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Serif;
+}
+
+.top {
+  height: 27%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem;
+  color: #ccc;
+  text-align: right;
+}
+
+.top_top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.top_top .three_dot {
+  height: 18px;
+  width: 5px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+}
+
+.top_top .dot {
+  height: 3px;
+  width: 3px;
+  background-color: white;
+  border-radius: 50px;
+}
+
+.top_middle input {
+  height: 4rem;
+  max-width: 100%;
+  font-size: 3rem;
+  border: none;
+  margin-bottom: 1.5rem;
+  background: transparent;
+  text-align: right;
+  color: white;
+}
+
+.top_middle input:focus {
+  outline: none;
+  color: #ccc;
+}
+
+.down {
+  position: relative;
+  width: inherit;
+  height: 73%;
+  display: flex;
+  color: #333;
+}
+
+.down input {
+  text-align: center;
+  width: 50px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 2.1rem;
+}
+
+.down input:focus {
+  outline: none;
+}
+
+.numbers {
+  width: 70%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  background-color: #181616;
+  justify-content: center;
+  padding: 3rem;
+  gap: 30px;
+}
+
+.numbers .num_col, .operators_col, .other_op_col {
+  display: flex;
+  flex-direction: column;
+  row-gap: 85px;
+}
+
+#equalto {
+  color: green;
+}
+
+.operators {
+  width: 23%;
+  height: 100%;
+  background-color: #1e1d1d;
+  padding: 2.5rem 1rem;
+}
+
+.operators_col {
+  row-gap: 78px;
+}
+
+.operators input {
+  font-size: 18px;
+  color: #ff8331;
+}
+
+.other_op {
+  position: absolute;
+  right: -73%;
+  background-color: #fc751c;
+  height: 100%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  padding: 2.5rem;
+  gap: 35px;
+}
+
+.other_op input {
+  font-size: 18px;
+}
+
+.other_op_col {
+  row-gap: 80px;
+}

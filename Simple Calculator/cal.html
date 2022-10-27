@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Simple Calculator</title>
+   <link rel="stylesheet" href="cal.css" type="text/css" media="all" />
+  </head>
+  <body>
+    
+    <!-- TOP PART, WHERE CALCULATION -->
+    <div class="top">
+      <div class="top_top">
+        <h4>DEG</h4>
+        <div class="three_dot">
+          <div class="dot dot1"></div>
+          <div class="dot dot2"></div>
+          <div class="dot dot3"></div>
+        </div>
+      </div>
+      <div class="top_middle">
+        <input type="text" name="calField" id="calField" value="" readonly />
+      </div>
+      <div class="top_bottom">
+        <h2 id="answerField">1</h2>
+      </div>
+    </div>
+    
+    <!-- BOTTOM PART, THE NUMBERS AND OPERATORS PART -->
+    <div class="down" id="down">
+      
+      <!-- NUMBERS SECTION -->
+      <div class="numbers" id="numbers">
+        <!-- COLUMN ONE -->
+        <div class="num_col">
+          <input type="number" name="num7" id="num7" value="7" readonly onclick="calField.value+=num7.value"/>
+          <input type="number" name="num4" id="num4" value="4" readonly onclick="calField.value+=num4.value"/>
+          <input type="number" name="num1" id="num1" value="1" readonly onclick="calField.value+=num1.value"/>
+          <input type="text" name="dot" id="dot" value="." readonly onclick="calField.value+=dot.value"/>
+        </div>
+        <!-- COLUMN TWO -->
+        <div class="num_col">
+          <input type="number" name="num8" id="num8" value="8" readonly onclick="calField.value+=num8.value"/>
+          <input type="number" name="num5" id="num5" value="5" readonly onclick="calField.value+=num5.value"/>
+          <input type="number" name="num2" id="num2" value="2" readonly onclick="calField.value+=num2.value"/>
+          <input type="text" name="zero" id="zero" value="0" readonly onclick="calField.value+=zero.value"/>
+        </div>
+        <!-- COLUMN THREE -->
+        <div class="num_col">
+          <input type="number" name="num9" id="num9" value="9" readonly onclick="calField.value+=num9.value"/>
+          <input type="number" name="num6" id="num6" value="6" readonly onclick="calField.value+=num6.value"/>
+          <input type="number" name="num3" id="num3" value="3" readonly onclick="calField.value+=num3.value"/>
+          <input type="text" name="eqalto" id="equalto" value="=" readonly/>
+        </div>
+      </div>
+      
+      <!-- OPERATORS SECTION -->
+      <div class="operators" id="operators">
+        <div class="operators_col">
+          <!--come back here-->
+          <input type="text" name="del" id="del" value="DEL" readonly onclick="calField.value=''"/>
+          
+          <input type="text" name="div" id="div" value="÷" readonly onclick="calField.value+=div.value"/>
+          <input type="text" name="mult" id="mult" value="×" readonly onclick="calField.value+=mult.value"/>
+          <input type="text" name="sub" id="sub" value="-" readonly onclick="calField.value+=sub.value"/>
+          <input type="text" name="add" id="add" value="+" readonly onclick="calField.value+=add.value"/>
+        </div>
+      </div>
+      
+      <!-- ADVANCED OPERATORS -->
+      <div class="other_op" id="other_op">
+        <!-- COLUMN ONE -->
+        <div class="other_op_col">
+          <!--come back-->
+          <input type="text" name="inv" id="inv" value="INV" readonly/>
+          
+          <input type="text" name="sin" id="sin" value="sin" readonly onclick="calField.value+=sin("/>
+          <input type="text" name="ln" id="ln" value="ln" readonly onclick="calField.value+=ln("/>
+          <input type="text" name="pi" id="pi" value="pi" readonly onclick="calField.value+=pi.value"/>
+          <input type="text" name="opening_brace" id="opening_brace" value="(" readonly onclick="calField.value+=opening_brace.value"/>
+        </div>
+        <!-- COLUMN TWO -->
+        <div class="other_op_col">
+          <!--come back-->
+          <input type="text" name="rad" id="rad" value="RAD" readonly/>
+          
+          <input type="text" name="cos" id="cos" value="cos" readonly onclick="calField.value+=cos("/>
+          <input type="text" name="log" id="log" value="log" readonly onclick="calField.value+=log("/>
+          <input type="text" name="epsilon" id="epsilon" value="e" readonly onclick="calField.value+=e"/>
+          <input type="text" name="closing_brace" id="closing_brace" value=")" readonly onclick="calField.value+=closing_brace.value"/>
+        </div>
+        <!-- COLUMN THREE -->
+        <div class="other_op_col">
+          <input type="text" name="percent" id="percent" value="%" readonly onclick="calField.value+=percent.value"/>
+          <input type="text" name="tan" id="tan" value="tan" readonly onclick="calField.value+=tan("/>
+          <input type="text" name="exlamation" id="exlamation" value="!" readonly onclick="calField.value+=exlamation.value"/>
+          <input type="text" name="pow" id="pow" value="^" readonly onclick="calField.value+=pow.value"/>
+          <input type="text" name="sqrt" id="sqrt" value="√" readonly onclick="calField.value+=sqrt.value"/>
+        </div>
+      </div>
+    </div>
+    
+    
+    <script src="cal.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
