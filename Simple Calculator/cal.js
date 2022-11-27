@@ -16,9 +16,9 @@ numbers.addEventListener('click', function() {
 
 // CALCULATION PART
 
-const calField = document.getElementById("calField")
-const num7 = document.getElementById("num7");
+const calField = document.getElementById("calField");
 
-//num7.addEventListener('click', ()=>{
- // calField.value = "7"
-//})
+const equalTo = () => {
+  let total;
+  let operator = ['']
+}
