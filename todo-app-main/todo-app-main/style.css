@@ -8,8 +8,13 @@
 
 body {
  width: 100%;
+ height: 100vh;
  overflow-x: hidden;
  font-family: 'Josefin Sans', Sans-Serif;
+ /*display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;*/
 }
 
 img {
@@ -18,4 +23,51 @@ img {
 
 p{
   font-size: 18px;
+}
+
+:root {
+  /* Primary */
+  --bright-blue: hsl(221, 98%, 61%);
+  --checkBG: linear-gradient hsl(192, 100%, 67%);
+  --checkBG-two: hsl(280, 87%, 65%);
+  
+  /* Neutral */
+  /* Light theme */
+  --vry-light-gray: hsl(0, 0%, 98%);
+  --vry-light-grayish-blue: hsl(236, 33%, 92%);
+  --light-grayish-blue: hsl(233, 11%, 84%);
+  --dark-grayish-blue: hsl(236, 9%, 61%);
+  --vry-dark-grayish-blue: hsl(235, 19%, 35%);
+  
+  /* Dark theme */
+  --vry-dark-blue: hsl(235, 21%, 11%);
+  --vry-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --light-grayish-blue: hsl(234, 39%, 85%);
+  --light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --dark-grayish-blue: hsl(234, 11%, 52%);
+  --vry-dark-grayish-blue: hsl(233, 14%, 35%);
+  --vry-dark-grayish-blue-tw: hsl(237, 14%, 26%);
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.todo {
+  width: 88vw;
+  margin: auto;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: red;
+}
+
+.top img {
+  width: 1rem;
 }
