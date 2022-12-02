@@ -28,8 +28,7 @@ p{
 :root {
   /* Primary */
   --bright-blue: hsl(221, 98%, 61%);
-  --checkBG: linear-gradient hsl(192, 100%, 67%);
-  --checkBG-two: hsl(280, 87%, 65%);
+  --checkBG: linear-gradient (hsl(192, 100%, 67%), hsl(280, 87%, 65%));
   
   /* Neutral */
   /* Light theme */
@@ -65,9 +64,14 @@ p{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: red;
+  margin: 3rem 0 1.5rem;
+}
+
+.top h1 {
+  letter-spacing: 9px;
+  color: var(--vry-light-gray);
 }
 
 .top img {
-  width: 1rem;
+  width: 1.3rem;
 }
