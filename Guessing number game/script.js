@@ -18,25 +18,29 @@ counter.innerHTML = counts;
 
 // Event listener on the check button
 checkBtn.addEventListener('click', () => {
-  // To decrease the counter each time the check button is clicked
-  counts--;
-  counter.innerHTML = counts;
-  
   // Checks if the number entered by the user is less than, else if it is greater than random number or if it is equal to the random number respectively
   if (input.value < randomNum) {
-    wrongNum.innerHTML = 'Wrong number, too low';
-    prevNumEnt.innerHTML += ' ' + input.value;
+    if (input.value === '') {
+      wrongNum.innerHTML = 'No input, Please input a number';
+      counter.innerHTML = counts;
+    } else {
+      wrongNum.innerHTML = 'Wrong number, too low';
+      prevNumEnt.innerHTML += ' ' + input.value;
+      counts--;
+      counter.innerHTML = counts;
+    }
   } else if (input.value > randomNum) {
     wrongNum.innerHTML = 'Wrong number, too high';
     prevNumEnt.innerHTML += ' ' + input.value;
+    counts--;
+    counter.innerHTML = counts;
   } else {
     correct.innerHTML = 'Correct!! The number is ' + randomNum;
     wrongNum.style.display = 'none';
     newGame.style.display = 'block';
     checkBtn.style.display = 'none';
-    checkBtn2.style.display = 'block'
+    checkBtn2.style.display = 'block';
   }
-  
   // Checks if the tries left counter is equal to zero and stop the counting and also preventing the user from entering more numbers
   if (counts === 0) {
     newGame.style.display = 'block';
@@ -45,10 +49,12 @@ checkBtn.addEventListener('click', () => {
     checkBtn.style.display = 'none';
     checkBtn2.style.display = 'block'
   }
+  
   input.value = "";
+  
 })
 
-// Button to reload the page in order to start a new game
-newGame.addEventListener('click', () => {
-  location.reload();
-})
+// Button to start a new game
+  newGame.addEventListener('click', () => {
+    location.reload();
+  })

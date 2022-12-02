@@ -103,12 +103,12 @@ html, body {
   }
   
   .container {
-    width: 90%;
+    width: 70%;
     margin: auto;
   }
   
   .buttons_texts {
-    max-width: 480px;
+    max-width: 100%;
   }
   
   .input_button input {
