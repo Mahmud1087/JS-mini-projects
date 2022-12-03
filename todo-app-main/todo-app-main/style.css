@@ -11,10 +11,6 @@ body {
  height: 100vh;
  overflow-x: hidden;
  font-family: 'Josefin Sans', Sans-Serif;
- /*display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;*/
 }
 
 img {
@@ -64,7 +60,7 @@ p{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 3rem 0 1.5rem;
+  margin: 2.8rem 0 2rem 0;
 }
 
 .top h1 {
@@ -74,4 +70,36 @@ p{
 
 .top img {
   width: 1.3rem;
+}
+
+.create-item {
+  width: 100%;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--vry-light-gray);
+  border-radius: 5px;
+}
+
+.empty-check {
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid var(--vry-light-grayish-blue);
+  background: transparent;
+  border-radius: 50px;
+}
+
+.create-item input {
+  font-family: 'Josefin Sans', Sans-Serif;
+  font-weight: 700;
+  color: red;
+  border: none;
+  width: 100%;
+  height: 1.2rem;
+  background: var(--vry-light-gray);
+}
+
+.create-item input:focus {
+  outline: none;
 }
