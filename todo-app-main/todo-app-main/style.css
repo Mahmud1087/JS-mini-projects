@@ -24,7 +24,7 @@ p{
 :root {
   /* Primary */
   --bright-blue: hsl(221, 98%, 61%);
-  --checkBG: linear-gradient (hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  --checkBG: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
   
   /* Neutral */
   /* Light theme */
@@ -72,22 +72,23 @@ p{
   width: 1.3rem;
 }
 
-.create-item {
+.create-item, 
+.new-item {
   width: 100%;
-  padding: 0.7rem;
+  padding: 0.7rem 1.2rem;
   display: flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 0.8rem;
   background: var(--vry-light-gray);
   border-radius: 5px;
 }
 
-.empty-check {
-  width: 1.4rem;
-  height: 1.4rem;
+.empty-check{
+  width: 1.2rem;
+  height: 1.2rem;
   border: 1px solid var(--vry-light-grayish-blue);
   background: transparent;
-  border-radius: 50px;
+  border-radius: 50%;
 }
 
 .create-item input {
@@ -95,11 +96,83 @@ p{
   font-weight: 700;
   color: red;
   border: none;
-  width: 100%;
   height: 1.2rem;
   background: var(--vry-light-gray);
 }
 
 .create-item input:focus {
   outline: none;
+}
+
+.new-item {
+  justify-content: space-between;
+  gap: 0;
+  margin-top: 0.9rem;
+  border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.new-item img {
+  width: 0.7rem;
+}
+
+.main {
+  color: var(--dark-grayish-blue);
+  position: relative;
+  padding-left: 0.8rem;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+  
+/* Hide the default checkbox */
+input[type=checkbox] {
+  visibility: hidden;
+}
+  
+/* Creating a custom checkbox
+based on demand */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.2rem;
+  width: 1.2rem;
+  background-color: var(--vry-light-gray);
+  border: 1px solid var(--vry-light-grayish-blue);
+  border-radius: 50%;
+}
+  
+/* Specify the background color to be
+shown when checkbox is checked */
+.main input:checked ~ .checkmark {
+  background: var(--checkBG);
+}
+  
+/* Checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+  
+/* Display checkmark when checked */
+.main input:checked ~ .checkmark:after {
+  display: block;
+}
+  
+/* Styling the checkmark using webkit */
+/* Rotated the rectangle by 45 degree and 
+showing only two border to make it look
+like a tickmark */
+.main .checkmark:after {
+  left: 5.5px;
+  bottom: 5.2px;
+  width: 3px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
