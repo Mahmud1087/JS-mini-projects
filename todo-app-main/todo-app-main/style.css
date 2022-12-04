@@ -11,7 +11,7 @@ body {
  height: 100vh;
  overflow-x: hidden;
  font-family: 'Josefin Sans', Sans-Serif;
- background-color: var(--light-gray);
+ background-color: var(--vry-light-gray);
 }
 
 img {
@@ -113,10 +113,10 @@ p{
 
 .todos {
   width: 100%;
-  background-color: var(--vry-light-gray);
+  background-color: white;
   border-radius: 5px;
-  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.15),
-   -4px 6px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.1),
+   -4px 6px 8px rgba(0, 0, 0, 0.1);
 }
 
 .new-item {
@@ -194,7 +194,7 @@ like a tickmark */
 }
 
 .todos-footer {
-  padding: 0.85rem 1.2rem;
+  padding: 1rem 1.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -212,4 +212,26 @@ like a tickmark */
   border: none;
   color: var(--dark-grayish-blue);
   font-weight: 500;
+}
+
+footer {
+  background-color: var(--vry-light-gray);
+  background-color: white;
+  color: var(--dark-grayish-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.95rem 1.2rem;
+  margin: 1.2rem 0;
+  border-radius: 5px;
+  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.05),
+   -4px -6px 8px rgba(0, 0, 0, 0.05);
+}
+
+.drag-drop {
+  text-align: center;
+  color: var(--dark-grayish-blue);
+  font-weight: 500;
+  margin: 2.6rem 0;
 }
