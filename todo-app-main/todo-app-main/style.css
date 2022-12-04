@@ -11,6 +11,7 @@ body {
  height: 100vh;
  overflow-x: hidden;
  font-family: 'Josefin Sans', Sans-Serif;
+ background-color: var(--light-gray);
 }
 
 img {
@@ -37,9 +38,9 @@ p{
   /* Dark theme */
   --vry-dark-blue: hsl(235, 21%, 11%);
   --vry-dark-desaturated-blue: hsl(235, 24%, 19%);
-  --light-grayish-blue: hsl(234, 39%, 85%);
+  --light-grayish-blue2: hsl(234, 39%, 85%);
   --light-grayish-blue-hover: hsl(236, 33%, 92%);
-  --dark-grayish-blue: hsl(234, 11%, 52%);
+  --dark-grayish-blue2: hsl(234, 11%, 52%);
   --vry-dark-grayish-blue: hsl(233, 14%, 35%);
   --vry-dark-grayish-blue-tw: hsl(237, 14%, 26%);
 }
@@ -75,12 +76,13 @@ p{
 .create-item, 
 .new-item {
   width: 100%;
-  padding: 0.7rem 1.2rem;
+  padding: 0.85rem 1.2rem;
   display: flex;
   align-items: center;
   gap: 0.8rem;
   background: var(--vry-light-gray);
   border-radius: 5px;
+  margin-bottom: 0.9rem;
 }
 
 .empty-check{
@@ -100,15 +102,29 @@ p{
   background: var(--vry-light-gray);
 }
 
+.create-item input::placeholder {
+  color: var(--dark-grayish-blue);
+  font-weight: 500;
+}
+
 .create-item input:focus {
   outline: none;
+}
+
+.todos {
+  width: 100%;
+  background-color: var(--vry-light-gray);
+  border-radius: 5px;
+  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.15),
+   -4px 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .new-item {
   justify-content: space-between;
   gap: 0;
-  margin-top: 0.9rem;
   border-bottom: 1px solid var(--light-grayish-blue);
+  border-radius: 0;
+  margin-bottom: 0;
 }
 
 .new-item img {
@@ -116,7 +132,7 @@ p{
 }
 
 .main {
-  color: var(--dark-grayish-blue);
+  color: var(--dark-grayish-blue2);
   position: relative;
   padding-left: 0.8rem;
   cursor: pointer;
@@ -175,4 +191,25 @@ like a tickmark */
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.todos-footer {
+  padding: 0.85rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--dark-grayish-blue);
+}
+
+.todos-footer p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.todos-footer button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  color: var(--dark-grayish-blue);
+  font-weight: 500;
 }
