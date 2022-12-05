@@ -79,28 +79,17 @@ p{
   padding: 1rem 1.2rem;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
   background: var(--vry-light-gray);
   border-radius: 5px;
   margin-bottom: 0.9rem;
 }
 
-.empty-check{
-  width: 1.2rem;
-  height: 1.2rem;
-  border: 1px solid var(--vry-light-grayish-blue);
-  background: transparent;
-  border-radius: 50%;
-}
-
 .create-item input {
   font-family: 'Josefin Sans', Sans-Serif;
   font-weight: 700;
-  color: red;
   border: none;
   height: 1.2rem;
   background: transparent;
-  /*background: var(--vry-light-gray);*/
 }
 
 .create-item input::placeholder {
@@ -122,7 +111,6 @@ p{
 
 .new-item {
   justify-content: space-between;
-  gap: 0;
   border-bottom: 1px solid var(--light-grayish-blue);
   border-radius: 0;
   margin-bottom: 0;
@@ -155,7 +143,6 @@ based on demand */
   left: 0;
   height: 1.2rem;
   width: 1.2rem;
-  /*background-color: var(--vry-light-gray)*/;
   background: transparent;
   border: 1px solid var(--vry-light-grayish-blue);
   border-radius: 50%;
@@ -218,14 +205,14 @@ like a tickmark */
 }
 
 footer {
-  /*background-color: white;*/
+  background-color: white;
   color: var(--dark-grayish-blue);
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.2rem;
-  padding: 0.95rem 1.2rem;
-  margin: 1.2rem 0;
+  gap: 1.4rem;
+  padding: 1.2rem;
+  margin: 1.4rem 0;
   border-radius: 5px;
   box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.05),
    -4px -6px 8px rgba(0, 0, 0, 0.05);
