@@ -11,7 +11,7 @@ body {
  height: 100vh;
  overflow-x: hidden;
  font-family: 'Josefin Sans', Sans-Serif;
- background-color: var(--vry-light-gray);
+ /*background-color: var(--vry-light-gray);*/
 }
 
 img {
@@ -49,7 +49,7 @@ p{
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -4;
 }
 
 .todo {
@@ -76,7 +76,7 @@ p{
 .create-item, 
 .new-item {
   width: 100%;
-  padding: 0.85rem 1.2rem;
+  padding: 1rem 1.2rem;
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -99,7 +99,8 @@ p{
   color: red;
   border: none;
   height: 1.2rem;
-  background: var(--vry-light-gray);
+  background: transparent;
+  /*background: var(--vry-light-gray);*/
 }
 
 .create-item input::placeholder {
@@ -125,6 +126,7 @@ p{
   border-bottom: 1px solid var(--light-grayish-blue);
   border-radius: 0;
   margin-bottom: 0;
+  background: transparent;
 }
 
 .new-item img {
@@ -153,7 +155,8 @@ based on demand */
   left: 0;
   height: 1.2rem;
   width: 1.2rem;
-  background-color: var(--vry-light-gray);
+  /*background-color: var(--vry-light-gray)*/;
+  background: transparent;
   border: 1px solid var(--vry-light-grayish-blue);
   border-radius: 50%;
 }
@@ -194,7 +197,7 @@ like a tickmark */
 }
 
 .todos-footer {
-  padding: 1rem 1.2rem;
+  padding: 1.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -215,8 +218,7 @@ like a tickmark */
 }
 
 footer {
-  background-color: var(--vry-light-gray);
-  background-color: white;
+  /*background-color: white;*/
   color: var(--dark-grayish-blue);
   display: flex;
   justify-content: center;
