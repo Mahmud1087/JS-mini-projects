@@ -24,6 +24,8 @@ p{
 .attribution { 
   font-size: 11px; 
   text-align: center;
+  color: var(--dark-grayish-blue2);
+  margin-top: 1.2rem;
 }
 
 .attribution a { 
@@ -104,6 +106,7 @@ p{
   height: 1.2rem;
   background: transparent;
   width: 100%;
+  color: var(--dark-grayish-blue);
 }
 
 .create-item input::placeholder {
@@ -223,6 +226,7 @@ like a tickmark */
   border: none;
   color: var(--dark-grayish-blue);
   font-weight: 500;
+  display: none;
 }
 
 footer {
@@ -237,6 +241,7 @@ footer {
   border-radius: 5px;
   box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.05),
    -4px -6px 8px rgba(0, 0, 0, 0.05);
+   display: none;
 }
 
 .drag-drop {
@@ -244,4 +249,5 @@ footer {
   color: var(--dark-grayish-blue);
   font-weight: 500;
   margin: 2.6rem 0;
+  display: none;
 }
