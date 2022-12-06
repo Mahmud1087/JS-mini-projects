@@ -26,9 +26,12 @@ const addNewItemInput = document.getElementById('addNewItemInput')
 
 modeSwitch.addEventListener('click', () => {
   /** COLORS TO BE DISPLAYED FOR DARKMODE **/
-  if (modeSwitch.src==='http://localhost:8158/images/icon-moon.svg') {
-    modeSwitch.src = 'http://localhost:8158/images/icon-sun.svg';
-    bgImage.src = 'http://localhost:8158/images/bg-mobile-dark.jpg';
+  //if (modeSwitch.src==='http://localhost:8158/images/icon-moon.svg') 
+  if (modeSwitch.src==='images/icon-moon.svg') {
+    //modeSwitch.src = 'http://localhost:8158/images/icon-sun.svg';
+    //bgImage.src = 'http://localhost:8158/images/bg-mobile-dark.jpg';
+    modeSwitch.src = 'images/icon-sun.svg';
+    bgImage.src = 'images/bg-mobile-dark.jpg';
     document.body.style.background = 'hsl(235, 21%, 11%)';
     todos.style.background = 'hsl(235, 24%, 19%)';
     todosFooter.style.color = 'hsl(234, 11%, 52%)';
@@ -51,8 +54,10 @@ modeSwitch.addEventListener('click', () => {
     
   } else {
     /** COLORS TO BE DISPLAYED FOR LIGHT MODE **/
-    modeSwitch.src = 'http://localhost:8158/images/icon-moon.svg';
-    bgImage.src = 'http://localhost:8158/images/bg-mobile-light.jpg';
+    //modeSwitch.src = 'http://localhost:8158/images/icon-moon.svg';
+    //bgImage.src = 'http://localhost:8158/images/bg-mobile-light.jpg';
+    modeSwitch.src = 'images/icon-moon.svg';
+    bgImage.src = 'images/bg-mobile-light.jpg';
     document.body.style.background = 'hsl(0, 0%, 98%)';
     todos.style.background = 'white';
     todosFooter.style.color = 'hsl(236, 9%, 61%)';
@@ -88,7 +93,8 @@ addNewItem.addEventListener('click', () => {
   label.setAttribute('class', 'main');
   input.setAttribute('type', 'checkbox');
   span.setAttribute('class', 'checkmark');
-  img.setAttribute('src', 'http://localhost:8158/images/icon-cross.svg');
+  //img.setAttribute('src', 'http://localhost:8158/images/icon-cross.svg');
+  img.setAttribute('src', 'images/icon-cross.svg');
   
   label.appendChild(input)
   label.appendChild(span)
