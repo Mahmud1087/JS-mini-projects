@@ -13,6 +13,9 @@ const checkBoxMenu = document.getElementsByClassName('main');
 const clearBtn = document.getElementById('clear-btn');
 const dragNdrop = document.getElementById('dragNdrop');
 const attribution = document.getElementById('attribution');
+const itemsLeft = document.getElementById('itemsLeft')
+const addNewItem = document.getElementById('addNewItem')
+const addNewItemInput = document.getElementById('addNewItemInput')
 
 
 /** MAKE THE FIRST TO DO LIST TO HAVE A BORDER RADIUS ON THE TOP LEFT AND RIGHT CORNER **/
@@ -70,5 +73,18 @@ modeSwitch.addEventListener('click', () => {
       checkBoxMenu[i].style.color = 'hsl(234, 11%, 52%)'
     }
     
+  }
+})
+
+itemsLeft.innerHTML = `${newItem.length} items left`;
+
+addNewItem.addEventListener('click', () => {
+  const div = document.createElement('div');
+  div.setAttribute('class', 'new-item')
+  
+  if (createItemInput.value === '') {
+    alert('Please enter a todo')
+  } else {
+    console.log(div)
   }
 })

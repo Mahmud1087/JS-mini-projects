@@ -6,14 +6,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css" type="text/css" media="all" />
   <title>Frontend Mentor | Todo app</title>
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    </style>
 </head>
-  
 <body>
-
   <img src="images/bg-mobile-light.jpg" alt="mobile light background image" class="bgImage" id="bgImage" />
   <div class="todo">
     <div class="top">
@@ -22,11 +16,10 @@
     </div>
   
     <div class="create-item" id="create-item">
-      <label class="main" id="addNewItem">
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
       <input type="text" id="newItem" placeholder="Create a new todo..." />
+      <button id="addNewItem">
+        ADD
+      </button>
     </div>
     
     <div class="todos" id="todos">
@@ -58,13 +51,13 @@
           </label>
         <img src="images/icon-cross.svg" alt="" />
       </div>
-      <div class="new-item">
+      <!---<div class="new-item">
           <label class="main">
             <input type="checkbox">
             <span class="checkmark"></span>Visit a friend
           </label>
         <img src="images/icon-cross.svg" alt="" />
-      </div>
+      </div>-->
       <div class="new-item">
           <label class="main">
             <input type="checkbox">
@@ -74,7 +67,7 @@
       </div>
       
       <div class="todos-footer" id="todos-footer">
-        <p>5 items left</p>
+        <p id="itemsLeft"></p>
         <button id="clear-btn">Clear Completed</button>
       </div>
     </div>

@@ -21,6 +21,15 @@ p{
   font-size: 18px;
 }
 
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%);
+}
+
 :root {
   /* Primary */
   --bright-blue: hsl(221, 98%, 61%);
@@ -83,12 +92,18 @@ p{
   margin-bottom: 0.9rem;
 }
 
+.create-item {
+  justify-content: space-between;
+  gap: 10px;
+}
+
 .create-item input {
   font-family: 'Josefin Sans', Sans-Serif;
   font-weight: 700;
   border: none;
   height: 1.2rem;
   background: transparent;
+  width: 100%;
 }
 
 .create-item input::placeholder {
@@ -98,6 +113,13 @@ p{
 
 .create-item input:focus {
   outline: none;
+}
+
+#addNewItem {
+  padding: 4px 10px;
+  border: 1px solid var(--dark-grayish-blue);
+  color: var(--dark-grayish-blue2);
+  border-radius: 5px;
 }
 
 .todos {
