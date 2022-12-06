@@ -20,7 +20,7 @@ const addNewItemInput = document.getElementById('addNewItemInput')
 
 /** MAKE THE FIRST TO DO LIST TO HAVE A BORDER RADIUS ON THE TOP LEFT AND RIGHT CORNER **/
 
-newItem[0].style.borderRadius = '5px 5px 0 0';
+//newItem[0].style.borderRadius = '5px 5px 0 0';
 
 /** DARKMODE AND LIGHT MODE IMPLEMENTATION BY CHANGING THE COLORS AND BACKGROUND COLORS **/
 
@@ -76,15 +76,35 @@ modeSwitch.addEventListener('click', () => {
   }
 })
 
-itemsLeft.innerHTML = `${newItem.length} items left`;
 
 addNewItem.addEventListener('click', () => {
   const div = document.createElement('div');
-  div.setAttribute('class', 'new-item')
+  const label = document.createElement('label');
+  const input = document.createElement('input');
+  const span = document.createElement('span');
+  const img = document.createElement('img');
+  
+  div.setAttribute('class', 'new-item');
+  label.setAttribute('class', 'main');
+  input.setAttribute('type', 'checkbox');
+  span.setAttribute('class', 'checkmark');
+  img.setAttribute('src', 'http://localhost:8158/images/icon-cross.svg');
+  
+  label.appendChild(input)
+  label.appendChild(span)
+  label.innerHTML += createItemInput.value
+  div.appendChild(label)
+  div.appendChild(img)
   
   if (createItemInput.value === '') {
     alert('Please enter a todo')
   } else {
-    console.log(div)
+    todos.insertBefore(div, todosFooter);
+    todosLength = todos.children.length;
+    itemsLeft.innerHTML = `${todosLength-1} items left`;
+    clearBtn.style.display = 'block';
+    footer.style.display = 'flex';
+    dragNdrop.style.display = 'block';
   }
+  createItemInput.value = '';
 })
