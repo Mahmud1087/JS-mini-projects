@@ -18,18 +18,11 @@ const addNewItem = document.getElementById('addNewItem')
 const addNewItemInput = document.getElementById('addNewItemInput')
 
 
-/** MAKE THE FIRST TO DO LIST TO HAVE A BORDER RADIUS ON THE TOP LEFT AND RIGHT CORNER **/
-
-//newItem[0].style.borderRadius = '5px 5px 0 0';
-
 /** DARKMODE AND LIGHT MODE IMPLEMENTATION BY CHANGING THE COLORS AND BACKGROUND COLORS **/
 
 modeSwitch.addEventListener('click', () => {
   /** COLORS TO BE DISPLAYED FOR DARKMODE **/
-  //if (modeSwitch.src==='http://localhost:8158/images/icon-moon.svg') {
  if (modeSwitch.src===`${location.origin}/images/icon-moon.svg`) {
-    //modeSwitch.src = 'http://localhost:8158/images/icon-sun.svg';
-    //bgImage.src = 'http://localhost:8158/images/bg-mobile-dark.jpg';
     modeSwitch.src = `${location.origin}/images/icon-sun.svg`;
     bgImage.src = `${location.origin}/images/bg-mobile-dark.jpg`;
     document.body.style.background = 'hsl(235, 21%, 11%)';
@@ -54,8 +47,6 @@ modeSwitch.addEventListener('click', () => {
     
   } else {
     /** COLORS TO BE DISPLAYED FOR LIGHT MODE **/
-    //modeSwitch.src = 'http://localhost:8158/images/icon-moon.svg';
-    //bgImage.src = 'http://localhost:8158/images/bg-mobile-light.jpg';
     modeSwitch.src = `${location.origin}/images/icon-moon.svg`;
    bgImage.src = `${location.origin}/images/bg-mobile-light.jpg`;
     document.body.style.background = 'hsl(0, 0%, 98%)';
@@ -82,18 +73,20 @@ modeSwitch.addEventListener('click', () => {
 })
 
 
-addNewItem.addEventListener('click', () => {
+/** ADDING ELEMENTS (TODO LISTS) WHEN THE ADD BUTTON IS CLICKED **/
+  addNewItem.addEventListener('click', () => {
+  /** CREATING NEW ELEMENTS LIST **/
   const div = document.createElement('div');
   const label = document.createElement('label');
   const input = document.createElement('input');
   const span = document.createElement('span');
   const img = document.createElement('img');
   
+  /** SETTING THE ELEMENTS ATTRIBUTES **/
   div.setAttribute('class', 'new-item');
   label.setAttribute('class', 'main');
   input.setAttribute('type', 'checkbox');
   span.setAttribute('class', 'checkmark');
-  //img.setAttribute('src', 'http://localhost:8158/images/icon-cross.svg');
   img.setAttribute('src', 'images/icon-cross.svg');
   
   label.appendChild(input)
@@ -112,9 +105,22 @@ addNewItem.addEventListener('click', () => {
     footer.style.display = 'flex';
     dragNdrop.style.display = 'block';
   }
-  createItemInput.value = '';
+  //createItemInput.value = '';
+ 
+  label.addEventListener('click', () => {
+    label.classList.toggle('completed')
+    //label.classList.add('completed')
+    console.log(label)
+  })
+  img.addEventListener('click', () => {
+    todos.removeChild(div)
+    todosLength--
+    itemsLeft.innerHTML=`${todosLength-1} items left`
+    if (todosLength-1 === 0) {
+      itemsLeft.innerHTML = `No items`;
+      clearBtn.style.display = 'none';
+      footer.style.display = 'none';
+      dragNdrop.style.display = 'none';
+    }
+  })
 })
-
-/*const img2 = document.createElement('img')
-img2.setAttribute('src', `${location.origin}/images/icon-cross.svg`)
-document.body.appendChild(img2)*/
