@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clock-outer-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background-color: #272727;
+  box-shadow: 4px 5px 10px rgba(0 0 0 / .2),
+  -4px 5px 10px rgba(0 0 0 / .4);
+}
+
+.clock-middle-circle {
+  width: 19rem;
+  height: 19rem;
+  border-radius: 50%;
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-inner-circle {
+  position: relative;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  background-color: #272727;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time {
+  position: absolute;
+  z-index: 999;
+  text-align: center;
+  color: #fff;
+  inset: 0px;
+  transform: rotate(calc(30deg * var(--i)));
+}
+
+h1 {
+  width: 0.2rem;
+  height: 1.3rem;
+  background-color: #ececec;
+  display: inline-block;
+  transform: rotate(calc(0deg * var(--i)));
+}
+
+.main h1 {
+  background-color: #0bfc0b;
+}
+
+.center-circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background-color: #455261;
+  z-index: 9999;
+}
+
+.hour-hand-wrapper {
+  position: absolute;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 50%;
+}
+
+.hour-hand {
+  position: relative;
+}
+
+.hour-hand .hand {
+  width: 0.3rem;
+  height: 4.5rem;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #62a2ff;
+}
+
+.min-hand-wrapper {
+  position: absolute;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+}
+
+.min-hand {
+  position: relative;
+}
+
+.min-hand .hand {
+  width: 0.3rem;
+  height: 5.5rem;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #62a2ff;
+  z-index: 2;
+}
+
+.sec-hand-wrapper {
+  position: absolute;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+}
+
+.sec-hand {
+  position: relative;
+}
+
+.sec-hand .hand {
+  width: 0.15rem;
+  height:7rem;
+  position: absolute;
+  top: 1.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #62a2ff;
+  background-color: red;
+  z-index: 2;
+}
