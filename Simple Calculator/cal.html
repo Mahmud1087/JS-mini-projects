@@ -18,10 +18,10 @@
         </div>
       </div>
       <div class="top_middle">
-        <input type="text" name="calField" id="calField" value="" readonly />
+        <input type="text" name="calField" id="calField" value="" readonly placeholder="0"/>
       </div>
       <div class="top_bottom">
-        <h2 id="answerField">1</h2>
+        <h2 id="answerField"></h2>
       </div>
     </div>
     
@@ -49,7 +49,7 @@
           <input type="number" name="num9" id="num9" value="9" readonly onclick="calField.value+=num9.value"/>
           <input type="number" name="num6" id="num6" value="6" readonly onclick="calField.value+=num6.value"/>
           <input type="number" name="num3" id="num3" value="3" readonly onclick="calField.value+=num3.value"/>
-          <input type="text" name="eqalto" id="equalto" value="=" readonly/>
+          <input type="text" name="eqalto" id="equalto" value="=" readonly onclick="equalTo()"/>
         </div>
       </div>
       
@@ -57,10 +57,10 @@
       <div class="operators" id="operators">
         <div class="operators_col">
           <!--come back here-->
-          <input type="text" name="del" id="del" value="DEL" readonly onclick="calField.value=''"/>
+          <input type="text" name="del" id="del" value="DEL" readonly onclick="deleteBtn()"/>
           
-          <input type="text" name="div" id="div" value="÷" readonly onclick="calField.value+=div.value"/>
-          <input type="text" name="mult" id="mult" value="×" readonly onclick="calField.value+=mult.value"/>
+          <input type="text" name="div" id="div" value="÷" readonly onclick="calField.value+='/'"/>
+          <input type="text" name="mult" id="mult" value="×" readonly onclick="calField.value+='*'"/>
           <input type="text" name="sub" id="sub" value="-" readonly onclick="calField.value+=sub.value"/>
           <input type="text" name="add" id="add" value="+" readonly onclick="calField.value+=add.value"/>
         </div>
@@ -73,8 +73,8 @@
           <!--come back-->
           <input type="text" name="inv" id="inv" value="INV" readonly/>
           
-          <input type="text" name="sin" id="sin" value="sin" readonly onclick="calField.value+=sin("/>
-          <input type="text" name="ln" id="ln" value="ln" readonly onclick="calField.value+=ln("/>
+          <input type="text" name="sin" id="sin" value="sin" readonly onclick="sin()"/>
+          <input type="text" name="ln" id="ln" value="ln" readonly onclick="calField.value+='ln('"/>
           <input type="text" name="pi" id="pi" value="pi" readonly onclick="calField.value+=pi.value"/>
           <input type="text" name="opening_brace" id="opening_brace" value="(" readonly onclick="calField.value+=opening_brace.value"/>
         </div>
@@ -83,15 +83,15 @@
           <!--come back-->
           <input type="text" name="rad" id="rad" value="RAD" readonly/>
           
-          <input type="text" name="cos" id="cos" value="cos" readonly onclick="calField.value+=cos("/>
-          <input type="text" name="log" id="log" value="log" readonly onclick="calField.value+=log("/>
-          <input type="text" name="epsilon" id="epsilon" value="e" readonly onclick="calField.value+=e"/>
+          <input type="text" name="cos" id="cos" value="cos" readonly onclick="calField.value+='cos('"/>
+          <input type="text" name="log" id="log" value="log" readonly onclick="calField.value+='log('"/>
+          <input type="text" name="epsilon" id="epsilon" value="e" readonly onclick="calField.value+='e'"/>
           <input type="text" name="closing_brace" id="closing_brace" value=")" readonly onclick="calField.value+=closing_brace.value"/>
         </div>
         <!-- COLUMN THREE -->
         <div class="other_op_col">
           <input type="text" name="percent" id="percent" value="%" readonly onclick="calField.value+=percent.value"/>
-          <input type="text" name="tan" id="tan" value="tan" readonly onclick="calField.value+=tan("/>
+          <input type="text" name="tan" id="tan" value="tan" readonly onclick="calField.value+='tan('"/>
           <input type="text" name="exlamation" id="exlamation" value="!" readonly onclick="calField.value+=exlamation.value"/>
           <input type="text" name="pow" id="pow" value="^" readonly onclick="calField.value+=pow.value"/>
           <input type="text" name="sqrt" id="sqrt" value="√" readonly onclick="calField.value+=sqrt.value"/>
