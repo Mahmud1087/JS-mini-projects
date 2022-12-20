@@ -108,10 +108,14 @@ modeSwitch.addEventListener('click', () => {
   //createItemInput.value = '';
  
   label.addEventListener('click', () => {
-    label.classList.toggle('completed')
-    //label.classList.add('completed')
-    console.log(label)
+    //if (label.classList.contains('completed')) {
+      //label.classList.remove('completed')
+    //} 
+    if (!label.classList.contains('completed')){
+      label.classList.add('completed')
+    }
   })
+  
   img.addEventListener('click', () => {
     todos.removeChild(div)
     todosLength--
