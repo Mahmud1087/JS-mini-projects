@@ -22,12 +22,59 @@ function sin() {
   const sin = 'Math.sin';
   calField.value += `${sin}(`;
 }
+function cos() {
+  const cos = 'Math.cos';
+  calField.value += `${cos}(`;
+}
+function tan() {
+  const tan = 'Math.tan';
+  calField.value += `${tan}(`;
+}
+function ln() {
+  const sin = 'Math.sin'; Math.ln()
+  calField.value += `${sin}(`;
+}
+function log() {
+  const log = 'Math.log';
+  calField.value += `${log}(`;
+}
+function exp() {
+  const exp = 'Math.exp';
+  calField.value += `${exp}(`;
+}
+function sqrt() {
+  const sqrt = 'Math.sqrt';
+  calField.value += `${sqrt}(`;
+}
+function pi() {
+  const pi = 'Math.pi';
+  calField.value += `${pi}(`;
+}
+function pow() {
+  const pow = 'Math.pow';
+  calField.value += `${pow}(`;
+}
+function log() {
+  const log = 'Math.log';
+  calField.value += `${log}(`;
+}
+/*function log() {
+  const log = 'Math.log';
+  calField.value += `${log}(`;
+}*/
 
 function equalTo() {
   answerField.innerHTML = eval(calField.value);
 }
 
 function deleteBtn() {
-  calField.value = '';
+  if (calField.value === '' || calField.value === 0) {
   answerField.innerHTML = '';
+  }
+  calField.value = calField.value.slice(0,-1);
+}
+
+function deleteAllBtn() {
+  calField.value = '';
+  answerField.innerHTML = 0;
 }
