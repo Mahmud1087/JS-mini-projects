@@ -58,10 +58,6 @@ function log() {
   const log = 'Math.log';
   calField.value += `${log}(`;
 }
-/*function log() {
-  const log = 'Math.log';
-  calField.value += `${log}(`;
-}*/
 
 function equalTo() {
   answerField.innerHTML = eval(calField.value);
